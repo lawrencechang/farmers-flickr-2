@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class FlickrTableViewController: UITableViewController {
 
@@ -32,16 +33,11 @@ class FlickrTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        //print ("In numberOfSectionsInTableView...")
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        //print ("In numberOFRowsInSection...")
         let count = self.feeds!.count
-        //print ("I think I have \(count) items in the table.")
         return count
     }
     
@@ -102,9 +98,8 @@ class FlickrTableViewController: UITableViewController {
 
         // Configure the cell...
         let feed = self.feeds![indexPath.row] as! FlickrFeed
-        //cell.textLabel?.text = feed.title as! String
         cell.nameLabel?.text = feed.title as! String
-        cell.imageView?.image = UIImage(data: NSData(contentsOfURL: NSURL(string: feed.media as! String)!)!)
+        cell.mediaImageView!.af_setImageWithURL(NSURL(string: feed.media as! String)!)
         return cell
     }
 
