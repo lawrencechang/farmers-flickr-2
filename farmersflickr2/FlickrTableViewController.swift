@@ -65,7 +65,6 @@ class FlickrTableViewController: UITableViewController {
                     print("Error message: \(error)")
                     return
                 }
-                
 
                 let items = list!.valueForKey("items") as! NSArray
                 
