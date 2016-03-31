@@ -15,12 +15,14 @@ class FullImageViewController: UIViewController {
     var image = UIImage()
     
     @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var myImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        myLabel.text = myTitle + "... right?"
+        myLabel.text = myTitle
+        myImage.image = image
     }
 
     override func didReceiveMemoryWarning() {

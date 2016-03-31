@@ -68,10 +68,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ziP-TL-Pd2">
+                                <rect key="frame" x="0.0" y="86" width="600" height="514"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="myImage" destination="ziP-TL-Pd2" id="hv0-36-qOj"/>
                         <outlet property="myLabel" destination="xs8-Kd-c1B" id="bEf-96-XfU"/>
                     </connections>
                 </viewController>

@@ -150,7 +150,7 @@ class FlickrTableViewController: UITableViewController {
                 destinationVC.myID = 1337
                 if let myCell = sender as! FlickrFeedTableViewCell? {
                     destinationVC.myTitle = (myCell.nameLabel?.text)!
-                    //destinationVC.image = myCell.mediaImageView
+                    destinationVC.image = (myCell.mediaImageView?.image)!
                 }
                 
             }
