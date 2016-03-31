@@ -14,18 +14,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="94" id="YQB-Bq-BZh" customClass="FlickrFeedTableViewCell" customModule="farmersflickr2" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="94" id="YQB-Bq-BZh" customClass="FlickrFeedTableViewCell" customModule="farmersflickr2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YQB-Bq-BZh" id="uAs-yi-BqO">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="93"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="93"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J3N-sF-1TB">
                                             <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5A-R3-wZg">
-                                            <rect key="frame" x="112" y="0.0" width="488" height="93"/>
+                                            <rect key="frame" x="112" y="0.0" width="455" height="93"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -35,6 +35,7 @@
                                 <connections>
                                     <outlet property="mediaImageView" destination="J3N-sF-1TB" id="cdS-HZ-LM8"/>
                                     <outlet property="nameLabel" destination="C5A-R3-wZg" id="jXb-fb-YeF"/>
+                                    <segue destination="gi0-4A-cuC" kind="show" identifier="ShowFullImageSegue" id="9M9-YV-FFI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -48,6 +49,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7L-Nw-crI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1143" y="527"/>
+        </scene>
+        <!--Full Image View Controller-->
+        <scene sceneID="cll-Cr-5aA">
+            <objects>
+                <viewController id="gi0-4A-cuC" customClass="FullImageViewController" customModule="farmersflickr2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t3H-ij-IRg"/>
+                        <viewControllerLayoutGuide type="bottom" id="T7x-d6-o17"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x0f-98-SvG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xs8-Kd-c1B">
+                                <rect key="frame" x="0.0" y="64" width="600" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="xs8-Kd-c1B" id="bEf-96-XfU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AT9-mQ-3ak" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="1263"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uoe-j8-y2t">
