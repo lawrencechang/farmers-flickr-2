@@ -42,10 +42,8 @@ class FlickrTableViewController: UITableViewController {
     }
     
     func setup() {
-        
         self.feeds = NSMutableArray()
-        
-        if let flickrURL = NSURL(string: "https://api.flickr.com/services/feeds/photos_public.gne?tags=gardenning&;tagmode=any&format=json&nojsoncallback=1") {
+        if let flickrURL = NSURL(string: "https://api.flickr.com/services/feeds/photos_public.gne?&format=json&nojsoncallback=1") {
             
             NSURLSession.sharedSession().dataTaskWithURL(flickrURL,completionHandler: { (data :NSData?, response: NSURLResponse?, error: NSError?) -> Void in
                 
@@ -61,7 +59,6 @@ class FlickrTableViewController: UITableViewController {
                 } catch {
                     print("Error attempting to parse JSON from Flickr:")
                     print(result)
-                    //print(data!)
                     print("Error message: \(error)")
                     return
                 }
